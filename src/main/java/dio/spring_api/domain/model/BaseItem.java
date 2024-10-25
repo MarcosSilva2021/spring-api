@@ -1,6 +1,6 @@
-package dio.spring-api;
+package dio.spring_api.domain.model;
 
-abstract class BaseItem {
+public abstract class BaseItem {
     private Long id;
     private String icon;
     private String description;
@@ -10,23 +10,23 @@ abstract class BaseItem {
     }
     
     public void setId(Long id) {
-            this.id = id;
-        }
+        this.id = id;
+    }
         
     public String getIcon() {
-            return icon;
-        }
+        return icon;
+    }
         
     public void setIcon(String icon) {
-            this.icon = icon;
-        }
+        this.icon = icon;
+    }
         
     public String getDescription() {
-            return description;
-        }
+        return description;
+    }
         
     public void setDescription(String description) {
-            this.description = description;
-        }
+        this.description = description;
+    }
 
 }
