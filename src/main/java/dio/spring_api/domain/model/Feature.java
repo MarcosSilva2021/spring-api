@@ -1,4 +1,4 @@
 package dio.spring_api.domain.model;
 
-public class Feature {
+public class Feature extends BaseItem{
 }
