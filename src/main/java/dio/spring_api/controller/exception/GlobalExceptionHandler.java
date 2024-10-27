@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.util.NoSuchElementException;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -14,5 +16,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handle(IllegalArgumentException businnsException){
         return  new ResponseEntity<>(businnsException.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
     }
+
+    @ExceptionHandler(NoSuchElementException.class)
+    public ResponseEntity<String> handle(NoSuchElementException notFoundException){
+        return  new ResponseEntity<>("Res ID not found", HttpStatus.NOT_FOUND);
+    }
+
 }
 
