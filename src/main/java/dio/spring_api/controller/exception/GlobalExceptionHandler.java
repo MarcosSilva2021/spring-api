@@ -1,6 +1,8 @@
 package dio.spring_api.controller.exception;
 
 import dio.spring_api.domain.model.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -12,15 +14,23 @@ import java.util.NoSuchElementException;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    private final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<String> handle(IllegalArgumentException businnsException){
+    public ResponseEntity<String> handleBusinessException(IllegalArgumentException businnsException){
         return  new ResponseEntity<>(businnsException.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<String> handle(NoSuchElementException notFoundException){
+    public ResponseEntity<String> handleNotFoundException(NoSuchElementException notFoundException){
         return  new ResponseEntity<>("Res ID not found", HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(Throwable.class)
+    public ResponseEntity<String> handleUnexpectedException(Throwable unexpectedException){
+        var msg = "Unexpected server error, see the logs.";
+        logger.error(msg, unexpectedException);
+        return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }
 
