@@ -19,7 +19,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findByid(@PathVariable Long id){
+    public ResponseEntity<User> findById(@PathVariable Long id){
         vr user = userService.findById(id);
         return  ResponseEntity.ok(user);
     }
