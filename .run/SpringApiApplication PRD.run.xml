@@ -1,0 +1,26 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SpringApiApplication PRD" type="Application" factoryName="Application">
+    <envs>
+      <env name="DATABASE_PUBLIC_URL" value="postgresql://postgres:jrworCTYeOYBiyiMzHXGnBVOBldaKjTC@junction.proxy.rlwy.net:32479/railway" />
+      <env name="DATABASE_URL" value="postgresql://postgres:jrworCTYeOYBiyiMzHXGnBVOBldaKjTC@postgres.railway.internal:5432/railway" />
+      <env name="PGDATABASE" value="railway" />
+      <env name="PGHOST" value="postgres.railway.internal" />
+      <env name="PGPASSWORD" value="jrworCTYeOYBiyiMzHXGnBVOBldaKjTC" />
+      <env name="PGPORT" value="5432" />
+      <env name="PGUSER" value="postgres" />
+      <env name="SPRING_PROFILES_ACTIVE" value="prd" />
+      <env name="DATABASE_PUBLIC_URL_1" value="junction.proxy.rlwy.net:32479/railway" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="dio.spring_api.SpringApiApplication" />
+    <module name="spring-api.main" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="dio.spring_api.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
