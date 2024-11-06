@@ -1,15 +1,16 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="SpringApiApplication PRD" type="Application" factoryName="Application">
     <envs>
-      <env name="DATABASE_PUBLIC_URL" value="postgresql://postgres:jrworCTYeOYBiyiMzHXGnBVOBldaKjTC@junction.proxy.rlwy.net:32479/railway" />
-      <env name="DATABASE_URL" value="postgresql://postgres:jrworCTYeOYBiyiMzHXGnBVOBldaKjTC@postgres.railway.internal:5432/railway" />
+      <env name="DATABASE_PUBLIC_URL" value="postgresql://postgres:mGKNIVToicscyqyDLAnfHpKHujUnKNxu@autorack.proxy.rlwy.net:24788/railway" />
+      <env name="DATABASE_URL" value="postgresql://postgres:mGKNIVToicscyqyDLAnfHpKHujUnKNxu@postgres.railway.internal:5432/railway" />
       <env name="PGDATABASE" value="railway" />
+      <env name="PGDATA" value="/var/lib/postgresql/data/pgdata" />
       <env name="PGHOST" value="postgres.railway.internal" />
-      <env name="PGPASSWORD" value="jrworCTYeOYBiyiMzHXGnBVOBldaKjTC" />
+      <env name="PGPASSWORD" value="mGKNIVToicscyqyDLAnfHpKHujUnKNxu" />
       <env name="PGPORT" value="5432" />
       <env name="PGUSER" value="postgres" />
       <env name="SPRING_PROFILES_ACTIVE" value="prd" />
-      <env name="DATABASE_PUBLIC_URL_1" value="junction.proxy.rlwy.net:32479/railway" />
+      <env name="DATABASE_PUBLIC_URL_1" value="autorack.proxy.rlwy.net:24788/railway" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="dio.spring_api.SpringApiApplication" />
     <module name="spring-api.main" />
