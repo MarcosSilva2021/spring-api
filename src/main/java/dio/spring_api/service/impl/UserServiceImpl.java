@@ -30,4 +30,25 @@ public class UserServiceImpl implements UserService {
         }
         return userRepository.save(userToCreate);
     }
+
+    @Override
+    public User update(Long id, User userToUpdate) {
+        // Verifica se o usuário existe
+        User existingUser = userRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Usuário não encontrado !"));
+        // Atualizar os campos
+        existingUser.setName(userToUpdate.getName());
+        existingUser.setAccount(userToUpdate.getAccount());
+        existingUser.setCard(userToUpdate.getCard());
+        existingUser.setFeatures(userToUpdate.getFeatures());
+        existingUser.setNews(userToUpdate.getNews());
+
+        // Salvando o usuário
+        return userRepository.save(existingUser);
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
 }
