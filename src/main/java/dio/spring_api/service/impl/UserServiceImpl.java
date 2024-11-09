@@ -49,6 +49,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(Long id) {
+        // Verifica se o usuário existe
+        User existingUser = userRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Usuário não encontrado !"));
 
+        // deletar o usuário
+        userRepository.delete(existingUser);
     }
 }
