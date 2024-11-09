@@ -2,6 +2,7 @@ package dio.spring_api.controller;
 
 import dio.spring_api.domain.model.User;
 import dio.spring_api.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -32,6 +33,11 @@ public class UserController {
                 .buildAndExpand(userCreated.getId())
                 .toUri();
         return  ResponseEntity.created(location).body(userCreated);
+    }
+
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user ){
+        User updateUser = userService.update(id, user);
+        return new ResponseEntity<>(updateUser, HttpStatus.OK);
     }
 
 }
