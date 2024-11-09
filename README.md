@@ -61,9 +61,12 @@ User "1" *-- "1" Account
 ### acessar o console do h2 database 
 - http://localhost:8080/h2-console
 
-
 ### acessar a url no swagger
 - http://localhost:8080/swagger-ui/index.html
+
+### acessar a aplicação online no Railway
+- https://spring-api-prd.up.railway.app/swagger-ui/index.html#/
+
 
 ### json online edit
 - https://jsoneditoronline.org/
