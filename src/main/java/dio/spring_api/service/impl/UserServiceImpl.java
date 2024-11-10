@@ -5,6 +5,7 @@ import dio.spring_api.domain.repository.UserRepository;
 import dio.spring_api.service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -55,5 +56,10 @@ public class UserServiceImpl implements UserService {
 
         // deletar o usuário
         userRepository.delete(existingUser);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return userRepository.findAll();
     }
 }
