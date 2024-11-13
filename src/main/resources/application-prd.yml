@@ -13,4 +13,5 @@ spring:
 
   # desabilitar favicon
   mvc:
-    favicon: enabled=false
+    favicon:
+      enabled: false
