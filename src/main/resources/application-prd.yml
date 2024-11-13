@@ -12,6 +12,3 @@ spring:
       dialect: org.hibernate.dialect.PostgreSQLDialect
 
   # desabilitar favicon
-  mvc:
-    favicon:
-      enabled: false
